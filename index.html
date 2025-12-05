@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anny & Filipe - Nosso Casamento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="ring"></div>
+        <p>Anny e Filipe</p>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-music"></i>
+            <span class="music-text">Música</span>
+        </button>
+        <div id="musicWidget" class="music-widget">
+            <iframe width="100%" height="100" src="https://www.youtube.com/watch?v=u2FOGNSJfX8&list=RDu2FOGNSJfX8&start_radio=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Header Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="couple-names">Anny e Filipe</h1>
+            <p class="wedding-date">16 • 01 • 2026</p>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Versículo -->
+    <section class="verse" id="verse">
+        <div class="container">
+            <div class="verse-content">
+                <h2>"Assim, eles já não são dois, mas sim uma só carne. Portanto, o que Deus uniu, ninguém separe"</h2>
+                <p class="verse-reference">Mateus 19:6</p>
+                <div class="verse-decoration">
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                    <div class="leaf"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menssagem dos noivos -->
+    <section class="story" id="story">
+        <div class="container">
+            <h2>Menssagem dos noivos </h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Queridos familiares e amigos, É com grande alegria que convidamos vocês para nossa celebração. Sua presença é essencial. Agradecemos por fazer parte da nossa história. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data e Local -->
+    <section class="details" id="details">
+        <div class="container">
+            <h2>Quando & Onde</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="icon">📅</div>
+                    <h3>Data</h3>
+                    <p>16 de Janeiro de 2026</p>
+                    <p>Sexta, 12 horas</p>
+                </div>
+                <div class="detail-card">
+                    <div class="icon">📍</div>
+                    <h3>Local</h3>
+                    <p>Casa </p>
+                    <p>Marechal Deodoro - AL</p>
+                    <small>Praia do Frances</small>
+                </div>
+                <div class="detail-card">
+                    <div class="icon">👗</div>
+                    <h3>Traje</h3>
+                    <p><strong>Mulheres:</strong> Vestido longo ou midi </p>
+                    <p><strong>Homens:</strong> Roupa social </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Presentes -->
+    <section class="gifts" id="gifts">
+        <div class="container">
+            <h2>Lista de Presentes</h2>
+            <div class="gifts-intro">
+                <p>Seu carinho e presença são nossos maiores presentes!<br>
+                Se desejar nos presentear, ficaremos muito gratos.</p>
+            </div>
+
+            <div class="gift-categories">
+                <!-- Categoria Bronze -->
+                <div class="gift-category bronze">
+                    <div class="category-header">
+                        <div class="category-icon">🥉</div>
+                        <h3>Bronze</h3>
+                        <p class="category-price">R$ 50,00</p>
+                    </div>
+                    <div class="category-content">
+                        <button class="pix-btn bronze-btn" onclick="openPixModal(50)">
+                            Presentear com Bronze
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Categoria Prata -->
+                <div class="gift-category silver">
+                    <div class="category-header">
+                        <div class="category-icon">🥈</div>
+                        <h3>Prata</h3>
+                        <p class="category-price">R$ 150,00</p>
+                    </div>
+                    <div class="category-content">
+                        <button class="pix-btn silver-btn" onclick="openPixModal(150)">
+                            Presentear com Prata
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Categoria Ouro -->
+                <div class="gift-category gold">
+                    <div class="category-header">
+                        <div class="category-icon">🥇</div>
+                        <h3>Ouro</h3>
+                        <p class="category-price">R$ 200,00+</p>
+                    </div>
+                    <div class="category-content">
+                        <button class="pix-btn gold-btn" onclick="openPixModal(200)">
+                            Presentear com Ouro
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-amount">
+                <p>Ou escolha outro valor:</p>
+                <button class="custom-pix-btn" onclick="openPixModal(0)">
+                    <i class="fas fa-heart"></i>
+                    Presentear com Valor Personalizado
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmação de Presença -->
+<section class="confirmation" id="confirmation">
+    <div class="container">
+        <h2>Confirmação de Presença</h2>
+        
+        <div class="whatsapp-info">
+            <p><i class="fab fa-whatsapp"></i> Confirme sua presença pelo WhatsApp</p>
+        </div>
+
+        <div class="confirmation-buttons">
+            <button class="confirm-btn presence-btn" onclick="confirmPresence('Sim')">
+                <i class="fas fa-check-circle"></i>
+                Confirmar Presença
+            </button>
+            <button class="confirm-btn decline-btn" onclick="confirmPresence('Não')">
+                <i class="fas fa-times-circle"></i>
+                Não Poderei Ir
+            </button>
+        </div>
+
+        <!-- Formulário Simples para Nome -->
+        <div id="nameForm" class="form-container" style="display: none;">
+            <div class="form-header">
+                <h3 id="formTitle">Confirmação de Presença</h3>
+                <p id="formSubtitle">Digite seu nome completo</p>
+            </div>
+            <form class="simple-form">
+                <input type="text" id="guestName" placeholder="Seu Nome Completo" required>
+                <div class="form-buttons">
+                    <button type="button" class="cancel-btn" onclick="closeNameForm()">Cancelar</button>
+                    <button type="button" class="send-btn" onclick="sendToWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> Enviar Confirmação
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Galeria -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Nossos Momentos</h2>
+            <div class="gallery-grid">
+                <div class="/Users/klevertonfilipealcantara/Downloads/WhatsApp Image 2025-12-04 at 21.56.27.jpeg /Users/klevertonfilipealcantara/Downloads/WhatsApp Image 2025-12-04 at 21.57.10.jpeg /Users/klevertonfilipealcantara/Downloads/WhatsApp Image 2025-12-04 at 21.57.52.jpeg /Users/klevertonfilipealcantara/Downloads/WhatsApp Image 2025-12-04 at 21.57.24.jpeg" style="background: linear-gradient(45deg, var(--olive), var(--light-olive));"></div>
+                <div class="gallery-item" style="background: linear-gradient(45deg, var(--light-olive), var(--white));"></div>
+                <div class="gallery-item" style="background: linear-gradient(45deg, var(--white), var(--olive));"></div>
+                <div class="gallery-item" style="background: linear-gradient(45deg, var(--light-olive), var(--dark-olive));"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Anny e Filipe</h3>
+                <p>Obrigado por fazer parte da nossa história</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#contact"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal PIX -->
+    <div id="pixModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePixModal()">&times;</span>
+            
+            <div class="modal-header">
+                <h3 id="modalTitle">Presente para Anny & Filipe</h3>
+                <p id="modalSubtitle">Utilize o PIX abaixo</p>
+            </div>
+
+            <div class="pix-container">
+                <div class="pix-qr-code">
+                    <!-- QR Code PIX -->
+                    <div class="qr-code">
+                        <img src="SEU_QR_CODE_AQUI" alt="QR Code PIX" id="qrCodeImage">
+                        <div class="qr-placeholder" id="qrPlaceholder">
+                            <i class="fas fa-qrcode"></i>
+                            <p>QR Code PIX</p>
+                            <small>Coloque sua imagem QR Code aqui</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pix-details">
+                    <div class="amount-display">
+                        <span class="amount-label">Valor Sugerido:</span>
+                        <span class="amount-value" id="modalAmount">R$ 0,00</span>
+                    </div>
+
+                    <div class="pix-data">
+                        <label>Chave PIX:</label>
+                        <div class="pix-key-container">
+                            <span id="pixKey">kleverton.filipe30@gmail.com</span>
+                            <button onclick="copyPixKey()" class="copy-btn">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pix-data">
+                        <label>Titular:</label>
+                        <span>Anny e Filipe</span>
+                    </div>
+
+                    <div class="pix-data">
+                        <label>Banco:</label>
+                        <span>Seu Banco Aqui</span>
+                    </div>
+
+                    <div class="pix-instructions">
+                        <h4>Como fazer o PIX:</h4>
+                        <ol>
+                            <li>Abra o app do seu banco</li>
+                            <li>Selecione "Pagar com PIX"</li>
+                            <li>Escaneie o QR Code ou cole a chave</li>
+                            <li>Confirme o valor e envie</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <p>Obrigado por fazer parte do nosso amor! 💚</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
